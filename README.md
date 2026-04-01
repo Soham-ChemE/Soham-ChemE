@@ -29,9 +29,9 @@ I'm a chemical engineer working at the intersection of computational materials s
 
 | Project | Description | Tools |
 |---|---|---|
-| 🔋 Battery Cathode Materials Screener | Screens cathode candidates by ionic conductivity & voltage stability | Python, Pymatgen, Materials Project API |
-| ☀️ Perovskite Solar Cell Efficiency Analyzer | Extends SCAPS-1D capstone research computationally | Python, Plotly |
-| 🧪 Ionic Transport MD Companion | Interactive companion to my published MD simulation research | Python, ASE |
+| 🔋 [Battery Cathode Materials Screener](https://github.com/Soham-ChemE) | Screens cathode candidates by ionic conductivity & voltage stability | Python, Pymatgen, Materials Project API |
+| ☀️ [Perovskite Solar Cell Optimization](https://github.com/Soham-ChemE/Perovskite-Solar-Cell-SCAPS1D-Optimization) | SCAPS-1D simulation — 27.99% PCE, 2 granted patents | SCAPS-1D, Python |
+| 🧪 [Ionic Transport MD Simulation](https://github.com/Soham-ChemE/MD-IL-CNT-Interfacial-Interactions) | Springer 2024 — IL-CNT interfacial interactions | NAMD, OPLS-AA |
 
 *(Projects being actively updated)*
 
