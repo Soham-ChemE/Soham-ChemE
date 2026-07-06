@@ -40,9 +40,9 @@ I'm a chemical engineer working at the intersection of computational materials s
 ## Publications & Patents
 
 - 📰 **Publication** — Ionic transport in solid electrolytes via MD simulation, *Springer*
-- ⚡ **Patent 1** — Energy device technology *(granted)*
-- ⚡ **Patent 2** — Energy device technology *(granted)*
-- ⚡ **Patent 3** — Energy device technology *(granted)*
+- ⚡ **Design Patent 1** — Energy device technology *(granted)*
+- ⚡ **Design Patent 2** — Energy device technology *(granted)*
+- ⚡ **Utility Patent 3** — Energy device technology *(under review)*
 
 ---
 
