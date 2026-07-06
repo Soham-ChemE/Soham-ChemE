@@ -11,7 +11,7 @@ I'm a chemical engineer working at the intersection of computational materials s
 
 - 🔬 Researcher at the **Rappé Lab, UPenn** — DFT & hybrid perovskite simulations
 - 📄 **Springer-published** paper on ionic transport via MD simulation
-- ⚡ **3 granted patents** in energy device technologies
+- ⚡ **2 granted patents (1 under review)** in energy device technologies
 - 🎓 BE Chemical Engineering, VIT Vellore
 
 ---
