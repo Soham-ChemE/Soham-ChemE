@@ -1,7 +1,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Soham-ChemE/Soham-ChemE/main/profile_banner.png" alt="Soham Kavathekar" width="100%"></p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/soham-kavathekar-72a22b246"><img src="https://img.shields.io/badge/LinkedIn-Soham%20Kavathekar-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=22d3ee"></a>
+<a href="https://www.linkedin.com/in/soham-kavathekar-cheme"><img src="https://img.shields.io/badge/LinkedIn-Soham%20Kavathekar-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=22d3ee"></a>
 <a href="mailto:stg3719@seas.upenn.edu"><img src="https://img.shields.io/badge/Email-stg3719%40seas.upenn.edu-0a0a0b?style=for-the-badge&logo=gmail&logoColor=ff7a1a"></a>
 <img src="https://img.shields.io/badge/UPenn%20MS%20ChemE-class%20of%202027-0a0a0b?style=for-the-badge&logoColor=a78bfa">
 <img src="https://img.shields.io/badge/open%20to-internships%20%C2%B7%20full--time%20from%20May%202027-0a0a0b?style=for-the-badge&logoColor=f59e0b">
