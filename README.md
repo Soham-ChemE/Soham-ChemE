@@ -1,6 +1,6 @@
-<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="docs/assets/hero.svg" alt="Soham Kavathekar: six project marks drawn from each project's own data, lighting up in turn" width="100%"></a></p>
+<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="docs/assets/hero.svg" alt="Soham Kavathekar: one cloud of particles morphing between six shapes built from six projects' own data, next to each project's headline number" width="100%"></a></p>
 
-<p align="center"><b><a href="https://soham-cheme.github.io/Soham-ChemE/">Open the live page</a></b> · one scroll-driven 3D scene that flies through all six projects, each drawn from its own data</p>
+<p align="center"><b><a href="https://soham-cheme.github.io/Soham-ChemE/">Open the live page</a></b> · one particle cloud that morphs through all six projects as you scroll, each shape built from that project's own data, each headline number counting up as its project comes into focus</p>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/soham-kavathekar-cheme"><img src="https://img.shields.io/badge/LinkedIn-soham--kavathekar--cheme-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=22d3ee" alt="LinkedIn"></a>
@@ -16,14 +16,14 @@
 
 ## Projects
 
-Each card carries one number that is reproduced from the repository's own data (the audit trail is in every repo's `docs/CLAIMS.md`) and links to the code and to a live page with an interactive 3D view of the work.
+Each card leads with the project's strongest verified number, reproduced from the repository's own data (the audit trail is in every repo's `docs/CLAIMS.md`), and links to the code and to a live page where every figure is an interactive 3D scene.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-22d3ee?style=flat-square" alt=""> CathodeAI: structure-aware cathode screening
-**2,774** Li-ion insertion electrodes from the Materials Project screened through an eight-layer funnel. A three-descriptor Degradation Screening Index ranks 11 experimentally characterised cathodes at Spearman ρ = 0.76 (p = 0.007), against 0.55 for volume strain alone, and puts 10 of 11 on the right side of the durable split. Sole author; preprint on ChemRxiv, manuscript under revision at *Phys. Chem. Chem. Phys.*
+**Spearman ρ = 0.76 (p = 0.007) on 11 experimentally characterised cathodes.** Built an eight-layer funnel over 2,774 Li-ion insertion electrodes from the Materials Project and a three-descriptor Degradation Screening Index that outranks volume strain alone (0.55) and puts 10 of 11 cathodes on the right side of the durable split. Sole author; preprint on ChemRxiv, manuscript under revision at *Phys. Chem. Chem. Phys.*
 `Python` `pymatgen` `scikit-learn` `SHAP`
 [Repository](https://github.com/Soham-ChemE/CathodeAI-Battery-Materials-Screener) · [Live page](https://soham-cheme.github.io/CathodeAI-Battery-Materials-Screener/)
 
@@ -31,7 +31,7 @@ Each card carries one number that is reproduced from the repository's own data (
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-ff7a1a?style=flat-square" alt=""> LiMn₂O₄ half cell: PyBaMM rate model on my own data
-Commercial LMO half cells cycled on a Bio-Logic VMP-300 (CV at 0.1 to 0.3 mV/s; C/10 to 2C). A Doyle-Fuller-Newman model with three fitted parameters (**26 mV** training RMSE on C/5 and C/2 only) predicts the unseen 2C average voltage within 17 mV and all six CV peaks within 80 mV, then names the 2C loss: 74 % ohmic, 17 % charge transfer, 6 % diffusion. 58 automated tests.
+**26 mV training RMSE with three fitted parameters; the unseen 2C average voltage predicted within 17 mV.** Cycled commercial LMO half cells on a Bio-Logic VMP-300 (CV at 0.1 to 0.3 mV/s; C/10 to 2C), fitted a Doyle-Fuller-Newman model on C/5 and C/2 only, validated it blind at 2C and against all six CV peaks (within 80 mV), and named the 2C loss: 74 % ohmic, 17 % charge transfer, 6 % diffusion. 58 automated tests.
 `PyBaMM` `SciPy` `pytest`
 [Repository](https://github.com/Soham-ChemE/LMO-Cathode-Rate-Model-PyBaMM) · [Live page](https://soham-cheme.github.io/LMO-Cathode-Rate-Model-PyBaMM/)
 
@@ -41,7 +41,7 @@ Commercial LMO half cells cycled on a Bio-Logic VMP-300 (CV at 0.1 to 0.3 mV/s; 
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f43f5e?style=flat-square" alt=""> CVD reactor uniformity in COMSOL
-A 300 mm single-wafer showerhead reactor, 2D axisymmetric, flow + heat + species + surface kinetics. The 180 % non-uniformity was root-caused as mass-transfer limited (Da above 10) and fixed at the inlet: widening it from 10 to 150 mm gives 6.1 %, and a 14-run central composite design reaches **3.3 %** at 0.07 m/s. Gaussian-process surrogate (leave-one-out R² 0.944), 10,000-draw Monte Carlo on MFC and thermocouple tolerances, 3D model with asymmetric exhaust (5.9 %).
+**Wafer non-uniformity from 179.6 % to 3.3 %.** Built a 300 mm single-wafer showerhead reactor (2D axisymmetric: flow, heat, species, surface kinetics), diagnosed the starved deposit as mass-transfer limited (Da above 10), fixed it at the inlet (10 to 150 mm gives 6.1 %) and reached 3.3 % at 0.07 m/s with a 14-run central composite design. Gaussian-process surrogate with leave-one-out R² 0.944, 10,000-draw Monte Carlo on MFC and thermocouple tolerances, 3D model with asymmetric exhaust at 5.9 %.
 `COMSOL` `DOE` `Gaussian process` `Monte Carlo`
 [Repository](https://github.com/Soham-ChemE/CVD-Reactor-Uniformity-COMSOL) · [Live page](https://soham-cheme.github.io/CVD-Reactor-Uniformity-COMSOL/)
 
@@ -49,7 +49,7 @@ A 300 mm single-wafer showerhead reactor, 2D axisymmetric, flow + heat + species
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-a78bfa?style=flat-square" alt=""> Ionic liquids at carbon nanotube walls (MD)
-All-atom NAMD simulations of four imidazolium [BF₄] ionic liquids confined in a (15,15) nanotube: chain length sets orientation, binding and mobility, with [OMIM]⁺ binding at **−8.75 kcal mol⁻¹ per ion**. Co-author, *Structural Chemistry* (Springer Nature, 2024), doi 10.1007/s11224-024-02323-3. The repository ships the 19,260-atom minimised structure, which the live page renders.
+**[OMIM]⁺ binds at −8.75 kcal mol⁻¹ per ion.** All-atom NAMD simulations of four imidazolium [BF₄] ionic liquids confined in a (15,15) nanotube showed that chain length sets orientation, binding and mobility at the wall. Co-author, *Structural Chemistry* (Springer Nature, 2024), doi 10.1007/s11224-024-02323-3. The repository ships the 19,260-atom minimised structure, which the live page renders.
 `NAMD` `OPLS-AA` `VMD`
 [Repository](https://github.com/Soham-ChemE/MD-IL-CNT-Interfacial-Interactions) · [Live page](https://soham-cheme.github.io/MD-IL-CNT-Interfacial-Interactions/)
 
@@ -59,7 +59,7 @@ All-atom NAMD simulations of four imidazolium [BF₄] ionic liquids confined in 
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f59e0b?style=flat-square" alt=""> ZnSe/CdTe thin-film cell in SCAPS-1D
-FTO/ZnSe/CdTe heterojunction with ten electron-transport layers and nine back-contact metals screened in a six-parameter design of experiments. Best simulated efficiency **27.99 %** with a Cs₂BiAgI₆ ETL and nickel contact (V<sub>OC</sub> 1.21 V, J<sub>SC</sub> 25.96 mA cm⁻², FF 89.3 %), labelled as a simulation ceiling. Spiral panel architecture with 17.9 % more active area: two granted Indian design registrations, one utility application under review. Best Poster Award, 61st Annual Convention of Chemists.
+**27.99 % simulated efficiency** with a Cs₂BiAgI₆ electron-transport layer and nickel contact (V<sub>OC</sub> 1.21 V, J<sub>SC</sub> 25.96 mA cm⁻², FF 89.3 %), from a six-parameter design of experiments over ten electron-transport layers and nine back-contact metals on an FTO/ZnSe/CdTe heterojunction. Spiral panel architecture with 17.9 % more active area: two granted Indian design registrations, one utility application under review. Best Poster Award, 61st Annual Convention of Chemists.
 `SCAPS-1D` `drift-diffusion` `device physics`
 [Repository](https://github.com/Soham-ChemE/Perovskite-Solar-Cell-SCAPS1D-Optimization) · [Live page](https://soham-cheme.github.io/Perovskite-Solar-Cell-SCAPS1D-Optimization/)
 
@@ -67,7 +67,7 @@ FTO/ZnSe/CdTe heterojunction with ten electron-transport layers and nine back-co
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f97316?style=flat-square" alt=""> 4680 thermal-runaway propagation in COMSOL
-A 20-cell 5s4p pack of 4680 cells adapted from COMSOL's validated propagation model: 25 Ah and about 110 kJ per cell, 80 °C trigger. Twelve transient one-hour studies over base cooling from 0 to 2,000 W m⁻² K⁻¹ locate a sharp threshold in through-layer (radial) conductivity between **1.0 and 1.25 W m⁻¹ K⁻¹**: below it about 13 of 20 cells cascade within the hour, above it propagation stops at the initiating cell. The model file no longer exists, so the repository is the written record, a claims audit, the scaling arguments as tested code and a reduced-order surrogate labelled as such.
+**A sharp cascade threshold in through-layer conductivity between 1.0 and 1.25 W m⁻¹ K⁻¹.** Built a 20-cell 5s4p pack of 4680 cells on COMSOL's validated propagation model (25 Ah, 110 kJ per cell, 80 °C trigger) and ran twelve transient one-hour studies over base cooling from 0 to 2,000 W m⁻² K⁻¹: below the threshold about 13 of 20 cells cascade within the hour, above it propagation stops at the initiating cell; the threshold is a property of the cell rather than the cooling, and internal conduction, not the base contact, is the controlling resistance. Reduced-order model and tested scaling analysis in the repository.
 `COMSOL Battery Design Module` `reduced-order model` `pytest`
 [Repository](https://github.com/Soham-ChemE/4680-Thermal-Runaway-Propagation-COMSOL) · [Live page](https://soham-cheme.github.io/4680-Thermal-Runaway-Propagation-COMSOL/)
 
