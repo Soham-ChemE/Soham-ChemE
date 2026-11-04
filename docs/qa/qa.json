@@ -1,0 +1,40 @@
+{
+ "pages": {
+  "index.html": {
+   "dark": {
+    "errors": [],
+    "failed": [],
+    "imagesLoaded": "0/0",
+    "transferBytes": 518260,
+    "scenes": [
+     "cathodeai",
+     "lmo"
+    ],
+    "mobileErrors": []
+   },
+   "light": {
+    "errors": [],
+    "failed": [],
+    "imagesLoaded": "0/0",
+    "transferBytes": 520208,
+    "scenes": [
+     "cathodeai",
+     "lmo"
+    ],
+    "mobileErrors": []
+   },
+   "lighthouse": {
+    "performance": 98,
+    "accessibility": 96,
+    "bestPractices": 100,
+    "seo": 100,
+    "fcp": "0.8 s",
+    "lcp": "0.9 s",
+    "tbt": "50 ms",
+    "cls": "0",
+    "si": "1.2 s",
+    "bytes": "Total size was 431 KiB"
+   }
+  }
+ }
+}
