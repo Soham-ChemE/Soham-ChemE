@@ -13,14 +13,15 @@ verified CV list for the two projects that have no public repository.
 | SCAPS-1D | 27.99 %, V_OC 1.21 V, J_SC 25.96 mA cm⁻², FF 89.3 %; ten ETLs; nine metals; six parameters | `Perovskite-Solar-Cell-SCAPS1D-Optimization/docs/CLAIMS.md` (`scripts/make_figures.py`) |
 | SCAPS-1D, hardware | 17.9 % more active area; two granted design registrations 434427-001 and 459195-001; one utility application; Best Poster Award, 61st ACC | certificates in the SCAPS repository; the area figure and the award are from the CV |
 | 4680 thermal runaway | 20 cells, 25 Ah, ~110 kJ per cell, 80 °C trigger; threshold 1.0 to 1.25 W m⁻¹ K⁻¹; about 13 of 20 cells within an hour; 12 transient studies; cooling 0 to 2,000 W m⁻² K⁻¹ | CV verified list only; no public repository yet |
+| Rappé group DFT | MHy₂PbBr₄ Berry-phase polarization 5.6 µC cm⁻², experimental range 4.6 to 5.8 µC cm⁻² | CV verified fact; unpublished, no public repository |
+| Education and service | GPA 3.45/4.0 (Penn MS), 3.88/4.0 (VIT B.Tech); GAPSA Deputy Director to the President, more than 12,000 students represented | CV verified facts |
 
 ## Removed from the previous profile README
 
 | Removed | Why |
 |---|---|
 | "231 domains" for the 4680 model | not in the verified list and no repository to reproduce it from |
-| "Berry-phase polarisation of 5.6 µC cm⁻²" | unpublished and not in the verified list |
-| "12 % less downtime and 10 % less material waste", "600 kL/day", "433,000 t/yr", "12,000+ students", "GPA 3.88/4.0" | internship and service figures with no source in any repository and not in the verified list; the roles are kept without the figures |
+| "12 % less downtime and 10 % less material waste", "600 kL/day", "433,000 t/yr" | internship figures with no source in any repository and not in the verified list; the roles are kept without the figures |
 | "1 + 1 + 3 paper · manuscript · patents" tile | replaced by the explicit list: one paper, one preprint under revision, two granted design registrations and one utility application |
 | GitHub stats widgets | third-party images that add no verifiable information |
 

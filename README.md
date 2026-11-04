@@ -65,7 +65,7 @@ FTO/ZnSe/CdTe heterojunction with ten electron-transport layers and nine back-co
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-64748b?style=flat-square" alt=""> 4680 thermal-runaway propagation (COMSOL, being written up)
-A 20-cell tabless pack, 25 Ah and about 110 kJ per cell, with an 80 °C trigger. Twelve transient studies over cooling coefficients from 0 to 2,000 W m⁻² K⁻¹ locate the propagation threshold in through-layer conductivity between 1.0 and 1.25 W m⁻¹ K⁻¹: below it about 13 of 20 cells cascade within an hour, above it propagation stops at the initiating cell. Also ongoing: first-principles DFT on hybrid perovskite ferroelectrics (Rappé Lab, with Oak Ridge National Laboratory).
+A 20-cell tabless pack, 25 Ah and about 110 kJ per cell, with an 80 °C trigger. Twelve transient studies over cooling coefficients from 0 to 2,000 W m⁻² K⁻¹ locate the propagation threshold in through-layer conductivity between 1.0 and 1.25 W m⁻¹ K⁻¹: below it about 13 of 20 cells cascade within an hour, above it propagation stops at the initiating cell. Also ongoing, in the Rappé group: Berry-phase spontaneous polarization of MHy₂PbBr₄ computed at 5.6 µC cm⁻², within the 4.6 to 5.8 µC cm⁻² experimental range (DFT, Quantum ESPRESSO, collaboration with Oak Ridge CNMS).
 `COMSOL Battery Design Module` `Quantum ESPRESSO`
 
 </td>
@@ -89,7 +89,8 @@ Chemical process intern, Lubrikote Specialities (2025): DOE and SPC on a die-cas
 
 ## Education
 
-**University of Pennsylvania**, MS Chemical and Biomolecular Engineering, 2025 to 2027 · **Vellore Institute of Technology**, B.Tech Chemical Engineering, 2021 to 2025
+**University of Pennsylvania**, MS Chemical and Biomolecular Engineering, 2025 to 2027, GPA 3.45/4.0 · Deputy Director to the President of GAPSA, Penn's graduate student government, which represents more than 12,000 students
+**Vellore Institute of Technology**, B.Tech Chemical Engineering, 2021 to 2025, GPA 3.88/4.0
 
 ## Contact
 
