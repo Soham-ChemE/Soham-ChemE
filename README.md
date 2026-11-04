@@ -1,9 +1,11 @@
-<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="https://raw.githubusercontent.com/Soham-ChemE/Soham-ChemE/main/profile_banner.png" alt="Soham Kavathekar: energy materials and process engineering, with models that survive being re-run" width="100%"></a></p>
+<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="docs/assets/hero.svg" alt="Soham Kavathekar: six project marks drawn from each project's own data, lighting up in turn" width="100%"></a></p>
+
+<p align="center"><b><a href="https://soham-cheme.github.io/Soham-ChemE/">Open the live page</a></b> · one scroll-driven 3D scene that flies through all six projects, each drawn from its own data</p>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/soham-kavathekar-cheme"><img src="https://img.shields.io/badge/LinkedIn-soham--kavathekar--cheme-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=22d3ee" alt="LinkedIn"></a>
 <a href="mailto:stg3719@seas.upenn.edu"><img src="https://img.shields.io/badge/Email-stg3719%40seas.upenn.edu-0a0a0b?style=for-the-badge&logo=gmail&logoColor=ff7a1a" alt="Email"></a>
-<a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="https://img.shields.io/badge/Live%20project%20pages-5%20interactive%203D%20sites-0a0a0b?style=for-the-badge&logoColor=a78bfa" alt="Live project pages"></a>
+<a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="https://img.shields.io/badge/Live%20project%20pages-6%20interactive%203D%20sites-0a0a0b?style=for-the-badge&logoColor=a78bfa" alt="Live project pages"></a>
 </p>
 
 <h3 align="center">Soham Kavathekar · MS Chemical &amp; Biomolecular Engineering, University of Pennsylvania (May 2027) · process engineering and batteries</h3>
@@ -64,13 +66,16 @@ FTO/ZnSe/CdTe heterojunction with ten electron-transport layers and nine back-co
 </td>
 <td width="50%" valign="top">
 
-### <img src="https://img.shields.io/badge/-%20-64748b?style=flat-square" alt=""> 4680 thermal-runaway propagation (COMSOL, being written up)
-A 20-cell tabless pack, 25 Ah and about 110 kJ per cell, with an 80 °C trigger. Twelve transient studies over cooling coefficients from 0 to 2,000 W m⁻² K⁻¹ locate the propagation threshold in through-layer conductivity between 1.0 and 1.25 W m⁻¹ K⁻¹: below it about 13 of 20 cells cascade within an hour, above it propagation stops at the initiating cell. Also ongoing, in the Rappé group: Berry-phase spontaneous polarization of MHy₂PbBr₄ computed at 5.6 µC cm⁻², within the 4.6 to 5.8 µC cm⁻² experimental range (DFT, Quantum ESPRESSO, collaboration with Oak Ridge CNMS).
-`COMSOL Battery Design Module` `Quantum ESPRESSO`
+### <img src="https://img.shields.io/badge/-%20-f97316?style=flat-square" alt=""> 4680 thermal-runaway propagation in COMSOL
+A 20-cell 5s4p pack of 4680 cells adapted from COMSOL's validated propagation model: 25 Ah and about 110 kJ per cell, 80 °C trigger. Twelve transient one-hour studies over base cooling from 0 to 2,000 W m⁻² K⁻¹ locate a sharp threshold in through-layer (radial) conductivity between **1.0 and 1.25 W m⁻¹ K⁻¹**: below it about 13 of 20 cells cascade within the hour, above it propagation stops at the initiating cell. The model file no longer exists, so the repository is the written record, a claims audit, the scaling arguments as tested code and a reduced-order surrogate labelled as such.
+`COMSOL Battery Design Module` `reduced-order model` `pytest`
+[Repository](https://github.com/Soham-ChemE/4680-Thermal-Runaway-Propagation-COMSOL) · [Live page](https://soham-cheme.github.io/4680-Thermal-Runaway-Propagation-COMSOL/)
 
 </td>
 </tr>
 </table>
+
+Also ongoing, in the Rappé group at Penn: Berry-phase spontaneous polarization of MHy₂PbBr₄ computed at 5.6 µC cm⁻², within the 4.6 to 5.8 µC cm⁻² experimental range (DFT, Quantum ESPRESSO, collaboration with Oak Ridge CNMS).
 
 ## Toolkit
 
