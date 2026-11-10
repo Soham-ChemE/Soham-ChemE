@@ -1,4 +1,4 @@
-/* Landing-page hero (round 3): one GPU particle system that morphs between six shapes, each built from an excerpt of that
+/* Landing-page hero (round 3): one GPU particle system that morphs between seven shapes, each built from an excerpt of that
    project's own page data (window.PROFILE from assets/data.js, written by docs/build_assets.py from the sibling repositories).
    Scroll scrubs the morph and a camera path; the headline number of the project in focus counts up beside it.
    Technique: two position attributes (from, to) swapped on the CPU when the scroll segment changes, a per-particle delay so the
@@ -13,14 +13,15 @@ const interp = (rc, r) => { let i = 1; while (i < rc.length - 1 && rc[i][0] < r)
 const gauss = rnd => { const u = 1 - rnd(), v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
 const hex = h => { const c = new THREE.Color(h); return [c.r, c.g, c.b]; };
 
-/* ---------- the six shapes: positions in a 5-unit box, colours per theme ---------- */
+/* ---------- the seven shapes: positions in a 5-unit box, colours per theme ---------- */
 export const PROJECTS = [
   { key: 'cathodeai', name: 'CathodeAI', value: 2774, fmt: v => Math.round(v).toLocaleString('en-US'), unit: 'Li-ion cathodes screened', line: 'Degradation Screening Index, Spearman ρ = 0.76 on 11 experimental cathodes', url: 'https://soham-cheme.github.io/CathodeAI-Battery-Materials-Screener/', col: 'cyan' },
   { key: 'lmo', name: 'LMO half cell, PyBaMM', value: 26, fmt: v => Math.round(v) + ' mV', unit: 'training RMSE on my own cell data', line: 'three fitted parameters; blind 2C voltage within 17 mV', url: 'https://soham-cheme.github.io/LMO-Cathode-Rate-Model-PyBaMM/', col: 'hot' },
   { key: 'cvd', name: 'CVD reactor, COMSOL', value: 3.3, fmt: v => v.toFixed(1) + ' %', unit: 'wafer non-uniformity, from 179.6 %', line: 'root-caused as mass-transfer limited, fixed at the inlet, 14-run central composite design', url: 'https://soham-cheme.github.io/CVD-Reactor-Uniformity-COMSOL/', col: 'rose' },
   { key: 'md', name: 'Ionic liquids at nanotube walls', value: -8.75, fmt: v => v.toFixed(2) + ' kcal/mol', unit: 'per ion, [OMIM]⁺ at the CNT wall', line: 'all-atom NAMD, four imidazolium ionic liquids; Structural Chemistry 2024', url: 'https://soham-cheme.github.io/MD-IL-CNT-Interfacial-Interactions/', col: 'violet' },
   { key: 'scaps', name: 'ZnSe/CdTe cell, SCAPS-1D', value: 27.99, fmt: v => v.toFixed(2) + ' %', unit: 'simulated efficiency, Cs₂BiAgI₆ ETL', line: 'ten electron-transport layers and nine contacts in a six-parameter design of experiments', url: 'https://soham-cheme.github.io/Perovskite-Solar-Cell-SCAPS1D-Optimization/', col: 'warm' },
-  { key: 'tr4680', name: '4680 pack propagation, COMSOL', value: 1.25, fmt: v => v.toFixed(2) + ' W/m·K', unit: 'cascade threshold in through-layer conductivity', line: '20-cell pack, twelve one-hour studies, adiabatic stress test', url: 'https://soham-cheme.github.io/4680-Thermal-Runaway-Propagation-COMSOL/', col: 'hot' }
+  { key: 'tr4680', name: '4680 pack propagation, COMSOL', value: 1.25, fmt: v => v.toFixed(2) + ' W/m·K', unit: 'cascade threshold in through-layer conductivity', line: '20-cell pack, twelve one-hour studies, adiabatic stress test', url: 'https://soham-cheme.github.io/4680-Thermal-Runaway-Propagation-COMSOL/', col: 'hot' },
+  { key: 'ald', name: 'ALD chamber-to-feature model, OpenFOAM', value: 14.05, fmt: v => v.toFixed(2) + ' s', unit: 'saturating pulse on the patterned wafer, from 0.35 s blanket', line: 'supply rule within 25 % over AR 20–100; checked against measured ALD on 940 m² of powder', url: 'https://soham-cheme.github.io/ald-conformality/', col: 'green' }
 ];
 
 export function buildShapes(n, dark) {
@@ -45,6 +46,20 @@ export function buildShapes(n, dark) {
   // 6 · 4680: the twenty cells as particle shells, coloured by the reduced-order model's end-of-hour maximum temperature
   { const s = make(), rnd = mulberry(6), T = D.tr4680, last = T.cell_max_C[T.cell_max_C.length - 1], cool = new THREE.Color(pal.cool), hot = new THREE.Color(pal.hot), tmp = new THREE.Color();
     for (let k = 0; k < n; k++) { if (k % 8 === 0) { put(s, k, (rnd() - .5) * 3.1, -1.55 + gauss(rnd) * .01, (rnd() - .5) * 2.5, hex(pal.blue)); continue; } const c = k % 20, ix = c % 5, iy = Math.floor(c / 5), th = rnd() * Math.PI * 2, top = rnd() < .18; const u = Math.min(1, Math.max(0, (last[c] - 30) / 330)); tmp.copy(cool).lerp(hot, Math.min(1, u * 1.6)); const r = top ? Math.sqrt(rnd()) * .25 : .25, yy = top ? .5 : rnd() * 1.0 - .5; put(s, k, ix * .55 - 1.1 + Math.cos(th) * r, yy - .6 + .5, iy * .55 - .83 + Math.sin(th) * r, [tmp.r, tmp.g, tmp.b]); } out.push(s); }
+  // 7 · ALD: one AR-100 hole cut open (a half cylinder, its open side toward this shape's viewpoint) coloured by the hole model's
+  //     coverage from mouth to bottom at t = 8 s of the TMA pulse (green coated, steel bare), standing beside the 300 mm wafer as a
+  //     disc: its flat surface coloured by the chamber run's thetaFlat at the same time (saturated), the hole bottoms under it by thetaBottom (bare)
+  { const s = make(), rnd = mulberry(7), A = D.ald, H = A.hole, C = A.cov, th = H.theta[H.times.indexOf(8)], tf = C.thetaFlat[C.times.indexOf(8)], tb = C.thetaBottom[C.times.indexOf(8)], bare = hex(pal.steel), coated = hex(pal.green);
+    const cov = u => { u = Math.max(0, Math.min(1, u)); return [bare[0] + (coated[0] - bare[0]) * u, bare[1] + (coated[1] - bare[1]) * u, bare[2] + (coated[2] - bare[2]) * u]; };
+    const along = (arr, u) => { const t = Math.max(0, Math.min(arr.length - 1, u * (arr.length - 1))), i = Math.floor(t), f = t - i; return arr[i] + ((arr[Math.min(arr.length - 1, i + 1)] - arr[i]) * f); };
+    const radial = (arr, rmm) => { const R = C.radii_mm; let i = 1; while (i < R.length - 1 && R[i] < rmm) i++; const f = Math.max(0, Math.min(1, (rmm - R[i - 1]) / (R[i] - R[i - 1]))); return arr[i - 1] + (arr[i] - arr[i - 1]) * f; };
+    const HX = -.95, HZ = .15, HR = .72, TOP = 1.75, BOT = -1.6, open = Math.atan2(Math.cos(6 * 1.05 - .4), Math.sin(6 * 1.05 - .4)) + Math.PI / 2;   // viewpoint 7 of the camera loop, as in window.__hero.project
+    const WX = 1.35, WZ = .45, WR = 1.25, WY = -1.5;
+    for (let k = 0; k < n; k++) { const u = rnd();
+      if (u < .58) { const d = rnd(), ph = open + rnd() * Math.PI, r = HR + gauss(rnd) * .015; put(s, k, HX + Math.cos(ph) * r, TOP - d * (TOP - BOT), HZ + Math.sin(ph) * r, cov(along(th, d))); }
+      else if (u < .63) { const ph = open + rnd() * Math.PI, r = Math.sqrt(rnd()) * HR; put(s, k, HX + Math.cos(ph) * r, BOT + gauss(rnd) * .01, HZ + Math.sin(ph) * r, cov(th[th.length - 1])); }
+      else { const r = Math.sqrt(rnd()) * WR, ph = rnd() * Math.PI * 2, under = rnd() < .3, rmm = r / WR * 150; put(s, k, WX + Math.cos(ph) * r, (under ? WY - .14 : WY) + gauss(rnd) * .01, WZ + Math.sin(ph) * r, cov(under ? radial(tb, rmm) : radial(tf, rmm))); } }
+    out.push(s); }
   return out;
 }
 
@@ -81,7 +96,7 @@ void main(){ float d = length(gl_PointCoord - 0.5); float a = smoothstep(0.5, 0.
   geo.setAttribute('position', aA); geo.setAttribute('aA', aA); geo.setAttribute('aB', aB); geo.setAttribute('aColA', cA); geo.setAttribute('aColB', cB); geo.setAttribute('aRand', new THREE.BufferAttribute(rand, 1)); geo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 6);
   const mat = new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: FRAG, transparent: true, depthWrite: true, blending: st.dark ? THREE.AdditiveBlending : THREE.NormalBlending, uniforms: { uMix: { value: 0 }, uTime: { value: 0 }, uSize: { value: phone ? 34 : 30 }, uDpr: { value: Math.min(devicePixelRatio || 1, 2) }, uSwirl: { value: .9 }, uAlpha: { value: st.dark ? .85 : .95 } } });
   mat.toneMapped = true; const pts = new THREE.Points(geo, mat); pts.frustumCulled = false; scene.add(pts);
-  let seg = -1; const load = s => { const a = shapes[Math.min(5, s)], b = shapes[Math.min(5, s + 1)]; aA.array.set(a.pos); aB.array.set(b.pos); cA.array.set(a.col); cB.array.set(b.col); aA.needsUpdate = aB.needsUpdate = cA.needsUpdate = cB.needsUpdate = true; seg = s; st.dirty = true; };
+  let seg = -1; const load = s => { const last = shapes.length - 1, a = shapes[Math.min(last, s)], b = shapes[Math.min(last, s + 1)]; aA.array.set(a.pos); aB.array.set(b.pos); cA.array.set(a.col); cB.array.set(b.col); aA.needsUpdate = aB.needsUpdate = cA.needsUpdate = cB.needsUpdate = true; seg = s; st.dirty = true; };
   st.onTheme = dark => { shapes = buildShapes(N, dark); mat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending; mat.uniforms.uAlpha.value = dark ? .85 : .95; mat.needsUpdate = true; load(seg < 0 ? 0 : seg); };
   // camera: a loop of viewpoints, one per project, scrubbed by scroll; the cloud stays at the origin
   const K = PROJECTS.length; const pts3 = [], tg = []; for (let i = 0; i < K; i++) { const a = i * 1.05 - .4; pts3.push([Math.sin(a) * 8.2, 1.6 + Math.sin(i * 1.7) * 1.4, Math.cos(a) * 8.2]); tg.push([0, -.1, 0]); }

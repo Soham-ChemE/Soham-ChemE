@@ -1,14 +1,14 @@
-<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="docs/assets/hero.svg" alt="Soham Kavathekar: one cloud of particles morphing between six shapes built from six projects' own data, next to each project's headline number" width="100%"></a></p>
+<p align="center"><a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="docs/assets/hero.svg" alt="Soham Kavathekar: one cloud of particles morphing between seven shapes built from seven projects' own data, next to each project's headline number" width="100%"></a></p>
 
-<p align="center"><b><a href="https://soham-cheme.github.io/Soham-ChemE/">Open the live page</a></b> · one particle cloud that morphs through all six projects as you scroll, each shape built from that project's own data, each headline number counting up as its project comes into focus</p>
+<p align="center"><b><a href="https://soham-cheme.github.io/Soham-ChemE/">Open the live page</a></b> · one particle cloud that morphs through all seven projects as you scroll, each shape built from that project's own data, each headline number counting up as its project comes into focus</p>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/soham-kavathekar-cheme"><img src="https://img.shields.io/badge/LinkedIn-soham--kavathekar--cheme-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=22d3ee" alt="LinkedIn"></a>
 <a href="mailto:stg3719@seas.upenn.edu"><img src="https://img.shields.io/badge/Email-stg3719%40seas.upenn.edu-0a0a0b?style=for-the-badge&logo=gmail&logoColor=ff7a1a" alt="Email"></a>
-<a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="https://img.shields.io/badge/Live%20project%20pages-6%20interactive%203D%20sites-0a0a0b?style=for-the-badge&logoColor=a78bfa" alt="Live project pages"></a>
+<a href="https://soham-cheme.github.io/Soham-ChemE/"><img src="https://img.shields.io/badge/Live%20project%20pages-7%20interactive%203D%20sites-0a0a0b?style=for-the-badge&logoColor=a78bfa" alt="Live project pages"></a>
 </p>
 
-<h3 align="center">Soham Kavathekar · MS Chemical &amp; Biomolecular Engineering, University of Pennsylvania (May 2027) · process engineering and batteries</h3>
+<h3 align="center">Soham Kavathekar · MS Chemical &amp; Biomolecular Engineering, University of Pennsylvania (May 2027) · process engineering, semiconductor processing and batteries</h3>
 
 <p align="center">Physics-based and data-driven models of energy materials and processes, checked the way a fab or a cell line would check them:<br>designed experiments, capability statistics, and every number re-run from raw data before it is believed.</p>
 
@@ -22,12 +22,22 @@ Each card leads with the project's strongest verified number, reproduced from th
 <tr>
 <td width="50%" valign="top">
 
+### <img src="https://img.shields.io/badge/-%20-34d399?style=flat-square" alt=""> ALD chamber-to-feature model (OpenFOAM)
+**0.35 s → 14 s: the TMA pulse that saturates a blanket 300 mm wafer against the pulse a 3D-NAND-like wafer of 100 nm holes at aspect ratio 100 (56× the wall area) needs, a 40.7× under-dose hidden in every blanket-wafer recipe.** A showerhead ALD chamber in OpenFOAM in which every wafer face runs its own feature-scale hole model through a C++ boundary condition, two-way coupled to the gas. The resulting supply rule, t<sub>pulse</sub> = 1.2 (1 + A<sub>wall</sub>/A<sub>wafer</sub>) N₀/(U c₀), holds within 25 % over aspect ratios 20 to 100 and a 20× range of TMA feed across 12 chamber runs; the hole model agrees with Argonne's Machball to 0.3–7 %, fits published PillarHall profiles, and the rule puts a measured fluidized-bed ALD run on 940 m² of silica gel at 1.12× the supply limit. 25-run central composite design (JMP response surface, R² 0.993), Gaussian-process surrogates in MATLAB and scikit-learn (LOO R² 0.999), utilization 51 to 97 %, 12 % precursor saving per wafer at the same pulse time.
+`OpenFOAM` `C++ boundary conditions` `JMP` `MATLAB` `scikit-learn`
+[Repository](https://github.com/Soham-ChemE/ald-conformality) · [Live page](https://soham-cheme.github.io/ald-conformality/)
+
+</td>
+<td width="50%" valign="top">
+
 ### <img src="https://img.shields.io/badge/-%20-22d3ee?style=flat-square" alt=""> CathodeAI: structure-aware cathode screening
 **Spearman ρ = 0.76 (p = 0.007) on 11 experimentally characterised cathodes.** Built an eight-layer funnel over 2,774 Li-ion insertion electrodes from the Materials Project and a three-descriptor Degradation Screening Index that outranks volume strain alone (0.55) and puts 10 of 11 cathodes on the right side of the durable split. Sole author; preprint on ChemRxiv, manuscript under revision at *Phys. Chem. Chem. Phys.*
 `Python` `pymatgen` `scikit-learn` `SHAP`
 [Repository](https://github.com/Soham-ChemE/CathodeAI-Battery-Materials-Screener) · [Live page](https://soham-cheme.github.io/CathodeAI-Battery-Materials-Screener/)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-ff7a1a?style=flat-square" alt=""> LiMn₂O₄ half cell: PyBaMM rate model on my own data
@@ -36,8 +46,6 @@ Each card leads with the project's strongest verified number, reproduced from th
 [Repository](https://github.com/Soham-ChemE/LMO-Cathode-Rate-Model-PyBaMM) · [Live page](https://soham-cheme.github.io/LMO-Cathode-Rate-Model-PyBaMM/)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f43f5e?style=flat-square" alt=""> CVD reactor uniformity in COMSOL
@@ -46,6 +54,8 @@ Each card leads with the project's strongest verified number, reproduced from th
 [Repository](https://github.com/Soham-ChemE/CVD-Reactor-Uniformity-COMSOL) · [Live page](https://soham-cheme.github.io/CVD-Reactor-Uniformity-COMSOL/)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-a78bfa?style=flat-square" alt=""> Ionic liquids at carbon nanotube walls (MD)
@@ -54,8 +64,6 @@ Each card leads with the project's strongest verified number, reproduced from th
 [Repository](https://github.com/Soham-ChemE/MD-IL-CNT-Interfacial-Interactions) · [Live page](https://soham-cheme.github.io/MD-IL-CNT-Interfacial-Interactions/)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f59e0b?style=flat-square" alt=""> ZnSe/CdTe thin-film cell in SCAPS-1D
@@ -64,6 +72,8 @@ Each card leads with the project's strongest verified number, reproduced from th
 [Repository](https://github.com/Soham-ChemE/Perovskite-Solar-Cell-SCAPS1D-Optimization) · [Live page](https://soham-cheme.github.io/Perovskite-Solar-Cell-SCAPS1D-Optimization/)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### <img src="https://img.shields.io/badge/-%20-f97316?style=flat-square" alt=""> 4680 thermal-runaway propagation in COMSOL
@@ -72,6 +82,7 @@ Each card leads with the project's strongest verified number, reproduced from th
 [Repository](https://github.com/Soham-ChemE/4680-Thermal-Runaway-Propagation-COMSOL) · [Live page](https://soham-cheme.github.io/4680-Thermal-Runaway-Propagation-COMSOL/)
 
 </td>
+<td width="50%" valign="top"></td>
 </tr>
 </table>
 
@@ -79,7 +90,7 @@ Also ongoing, in the Rappé group at Penn: Berry-phase spontaneous polarization 
 
 ## Toolkit
 
-COMSOL Multiphysics (Battery Design Module) · PyBaMM · Python (NumPy, pandas, scikit-learn, SciPy, SHAP, matplotlib) · DFT with Quantum ESPRESSO · SCAPS-1D · NAMD and VMD · DOE (central composite, factorial), SPC, Cpk and Monte Carlo tolerance analysis · Aspen HYSYS · MATLAB · LaTeX · Linux and HPC job scheduling
+OpenFOAM (C++ boundary conditions) · COMSOL Multiphysics (Battery Design Module) · PyBaMM · Python (NumPy, pandas, scikit-learn, SciPy, SHAP, matplotlib) · DFT with Quantum ESPRESSO · SCAPS-1D · NAMD and VMD · DOE (central composite, factorial) in JMP, SPC, Cpk and Monte Carlo tolerance analysis · Aspen HYSYS · MATLAB · LaTeX · Linux and HPC job scheduling
 
 ## Experience
 

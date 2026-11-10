@@ -1,5 +1,5 @@
 /* Body scenes for the landing page: each project card carries a live 3D thumbnail drawn by the shared Viz renderer
-   (assets/viz.js) from the same six shapes the hero morphs between (buildShapes in scene.js), subsampled. */
+   (assets/viz.js) from the same seven shapes the hero morphs between (buildShapes in scene.js), subsampled. */
 import { Viz } from './viz.js';
 import { THREE } from './three-kit.js';
 import { buildShapes, PROJECTS } from './scene.js';
