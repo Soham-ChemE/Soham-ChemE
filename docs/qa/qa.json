@@ -5,22 +5,36 @@
     "errors": [],
     "failed": [],
     "imagesLoaded": "0/0",
-    "transferBytes": 518260,
+    "transferBytes": 530574,
     "scenes": [
-     "cathodeai",
-     "lmo"
+     "ald",
+     "cathodeai"
     ],
+    "heroEnd": {
+     "num": "14.05 s",
+     "on": true,
+     "now": "ALD chamber-to-feature model, OpenFOAM \u00b7 7 of 7 \u00b7 open the live page",
+     "t": 1
+    },
+    "heroEndReached": true,
     "mobileErrors": []
    },
    "light": {
     "errors": [],
     "failed": [],
     "imagesLoaded": "0/0",
-    "transferBytes": 520208,
+    "transferBytes": 530574,
     "scenes": [
-     "cathodeai",
-     "lmo"
+     "ald",
+     "cathodeai"
     ],
+    "heroEnd": {
+     "num": "14.05 s",
+     "on": true,
+     "now": "ALD chamber-to-feature model, OpenFOAM \u00b7 7 of 7 \u00b7 open the live page",
+     "t": 1
+    },
+    "heroEndReached": true,
     "mobileErrors": []
    },
    "lighthouse": {
@@ -28,12 +42,12 @@
     "accessibility": 96,
     "bestPractices": 100,
     "seo": 100,
-    "fcp": "0.8 s",
-    "lcp": "0.9 s",
-    "tbt": "50 ms",
+    "fcp": "0.8\u00a0s",
+    "lcp": "0.9\u00a0s",
+    "tbt": "50\u00a0ms",
     "cls": "0",
-    "si": "1.2 s",
-    "bytes": "Total size was 431 KiB"
+    "si": "1.2\u00a0s",
+    "bytes": "Total size was 431\u00a0KiB"
    }
   }
  }
