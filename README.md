@@ -66,10 +66,10 @@ Each card leads with the project's strongest verified number, reproduced from th
 </td>
 <td width="50%" valign="top">
 
-### <img src="https://img.shields.io/badge/-%20-f59e0b?style=flat-square" alt=""> ZnSe/CdTe thin-film cell in SCAPS-1D
-**27.99 % simulated efficiency** with a Cs₂BiAgI₆ electron-transport layer and nickel contact (V<sub>OC</sub> 1.21 V, J<sub>SC</sub> 25.96 mA cm⁻², FF 89.3 %), from a six-parameter design of experiments over ten electron-transport layers and nine back-contact metals on an FTO/ZnSe/CdTe heterojunction. Spiral panel architecture with 17.9 % more active area: two granted Indian design registrations, one utility application under review. Best Poster Award, 61st Annual Convention of Chemists.
-`SCAPS-1D` `drift-diffusion` `device physics`
-[Repository](https://github.com/Soham-ChemE/Perovskite-Solar-Cell-SCAPS1D-Optimization) · [Live page](https://soham-cheme.github.io/Perovskite-Solar-Cell-SCAPS1D-Optimization/)
+### <img src="https://img.shields.io/badge/-%20-f59e0b?style=flat-square" alt=""> CdTe solar cells: a passivated cliff, not a spike
+**A −0.30 eV passivated cliff, not the published +0.10 eV spike (Δχ² ≥ 447).** Calibrated, cross-validated device model of the 21.4 % ZnO/CdSeTe/CdTe solar cell in SCAPS-1D and NIST Sesame, about 1 mV apart, with profile-likelihood identifiability, a band-gap-fluctuation gate and DFT band offsets; a conservative design reaches 25.4 % in both solvers. It grew out of an audit of my 2025 capstone (Best Poster Award, 61st Annual Convention of Chemists; spiral panel with two granted Indian design registrations, one utility application under review), archived with its correction in the same repository.
+`SCAPS-1D` `NIST Sesame` `drift-diffusion` `Quantum ESPRESSO`
+[Repository](https://github.com/Soham-ChemE/CdTe-Solar-Cell-Device-Model) · [Live page](https://soham-cheme.github.io/CdTe-Solar-Cell-Device-Model/)
 
 </td>
 </tr>
