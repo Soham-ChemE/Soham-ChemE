@@ -61,9 +61,9 @@ def build_data():
     if md:
         A = md["atoms"]; keep = [i for i in range(len(A["t"])) if abs(A["z"][i]) < 5 and A["t"][i] != 3]
         snap["md"] = {"atoms": [[A["x"][i], A["y"][i], A["z"][i], A["t"][i]] for i in keep], "n_total": md["stats"]["n_atoms"], "cnt_radius_A": md["stats"]["cnt_radius_A"], "source": "MD docs/assets/data.js: the non-hydrogen atoms within 5 Å of the tube mid-plane (%d of 19,260)" % len(keep)}
-    sc_ = sibling_data("Perovskite-Solar-Cell-SCAPS1D-Optimization")
+    sc_ = sibling_data("CdTe-Solar-Cell-Device-Model")   # the key stays "scaps" for the scene and card ids
     if sc_:
-        snap["scaps"] = {"stack": sc_["stack"], "ranking": [[r[0], r[5]] for r in sc_["ranking"]], "best_pce": sc_["stats"]["best_pce"], "source": "SCAPS docs/assets/data.js: the layer stack and the ten-ETL ranking"}
+        snap["scaps"] = {"valley": [{"dEc": c["dEc"], "pts": c["pts"][::2]} for c in sc_["valley"]], "best": sc_["best"], "profile": [[q["dEc"], q["dchi2"], q["logS"]] for q in sc_["profile"]], "source": "CdTe docs/assets/data.js: the fine delta-chi2 scan of each simulated front offset (every second point), the profile and the best fit"}
     tr = sibling_data("4680-Thermal-Runaway-Propagation-COMSOL")
     if tr:
         key = tr["lumped"]["trace_cascade"]; t = tr["lumped"]["traces"][key]
@@ -86,7 +86,7 @@ def build_data():
 
 
 # ---------------- animated README hero from the page's own particle shapes ----------------
-HEAD = [("2,774", "cathodes screened", "#22d3ee"), ("26 mV", "PyBaMM fit, own data", "#f97316"), ("180 → 3.3 %", "CVD non-uniformity", "#fb7185"), ("−8.75 kcal/mol", "IL binding at the CNT wall", "#a78bfa"), ("27.99 %", "simulated ZnSe/CdTe cell", "#f59e0b"), ("1.0 → 1.25 W/m·K", "4680 cascade threshold", "#f97316"), ("0.35 s → 14 s", "ALD pulse, blanket vs 3D-NAND wafer", "#34d399")]
+HEAD = [("2,774", "cathodes screened", "#22d3ee"), ("26 mV", "PyBaMM fit, own data", "#f97316"), ("180 → 3.3 %", "CVD non-uniformity", "#fb7185"), ("−8.75 kcal/mol", "IL binding at the CNT wall", "#a78bfa"), ("−0.30 eV", "passivated cliff, 21.4 % CdTe cell", "#f59e0b"), ("1.0 → 1.25 W/m·K", "4680 cascade threshold", "#f97316"), ("0.35 s → 14 s", "ALD pulse, blanket vs 3D-NAND wafer", "#34d399")]
 
 
 def hero_shapes(shapes_path, force=False):
@@ -160,7 +160,7 @@ def build_preview():
     d.text((70, 130), "Energy materials and process engineering,", fill="#e6edf3", font=font(46)); d.text((70, 190), "with models that survive being re-run.", fill="#e6edf3", font=font(46))
     d.text((70, 275), "MS Chemical & Biomolecular Engineering, University of Pennsylvania  ·  batteries  ·  semiconductor processing", fill="#c9d4e2", font=font(20, False))
     # seven labels across 1280 px: 70 px margins, 163 px pitch, 142 px bar
-    labels = [("2,774", "cathodes screened"), ("26 mV", "PyBaMM fit, own data"), ("180 → 3.3 %", "CVD non-uniformity"), ("−8.75", "kcal/mol, IL at CNT wall"), ("27.99 %", "simulated ZnSe/CdTe"), ("1.0 → 1.25", "W/m·K, 4680 threshold"), ("0.35 → 14 s", "ALD pulse, 56× wall area")]
+    labels = [("2,774", "cathodes screened"), ("26 mV", "PyBaMM fit, own data"), ("180 → 3.3 %", "CVD non-uniformity"), ("−8.75", "kcal/mol, IL at CNT wall"), ("−0.30 eV", "cliff, 21.4 % CdTe cell"), ("1.0 → 1.25", "W/m·K, 4680 threshold"), ("0.35 → 14 s", "ALD pulse, 56× wall area")]
     assert len(labels) == K; pitch = (1280 - 140 - 142) // (K - 1)
     for i, (big, small) in enumerate(labels):
         x = 70 + i * pitch; d.rectangle([x, 380, x + 142, 384], fill=COLS[i]); d.text((x, 400), big, fill="#e6edf3", font=font(24)); d.text((x, 438), small, fill="#8b98a9", font=font(13, False))
